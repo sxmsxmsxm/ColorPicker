@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>colorPicker</title>
+	<link rel="stylesheet" type="text/css" href="css/colorpicker.min.css">
+	<script src="../jquery.min.js"></script>
+	<script type="text/javascript" src="colorpicker.js"></script>
+</head>
+<style type="text/css">
+	#demo{
+		width: 80px;
+		height: 30px;
+		border: 1px solid #ddd;
+		background-color: #f00;
+	}
+</style>
+<body>
+<div id="demo" ></div>
+<script>
+$('#demo').ColorPicker({
+
+	onChange: function (hsb, hex, rgb) {
+		var $el = $( $(this).data('colorpicker').el );
+		
+		$el.css('backgroundColor', '#' + hex).val('#' + hex);
+	}
+});
+	</script>
+</body>
+</html>
