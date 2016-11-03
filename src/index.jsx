@@ -1,16 +1,26 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import ColorPickers from './components/ColorPicker'
+import ColorPickerDemo from './components/ColorPicker'
 
-class App extends Component {
+const changeColorValue = (color) => {
+	alert(color)
+}
+
+class ColorPicker extends Component {
+	propTypes: {
+    	color: React.PropTypes.string.isRequired
+	}
 
 	render() {
 		return (
-				<ColorPickers color={"#f00"}/>
+			<ColorPickerDemo color={"#f00"} changeColorValue={changeColorValue}/>
 		)
 	}
 }
+ReactDOM.render(
+	<ColorPicker color={"#f00"}  changeColorValue={changeColorValue}/>,
+	document.getElementById('root')
+)
 
-ReactDOM.render(<App />, document.getElementById('root'))
 
 

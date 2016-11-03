@@ -1,18 +1,20 @@
 {
-  "name": "colorpicker",
+  "name": "react-init",
   "version": "1.0.0",
-  "description": "A colorpicker",
+  "description": "A scaffold for react projects.",
   "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server",
     "build": "node_modules/.bin/webpack",
+    "antd": "node_modules/.bin/shx cp node_modules/antd/dist/antd.min.css dist/libs/antd.css",
     "test": ""
   },
   "keywords": [
     "react",
-
+    "redux",
+    "ant-design"
   ],
-  "author": "sxm",
+  "author": "woota <wutayunfan@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.17.0",
@@ -33,6 +35,10 @@
   },
   "dependencies": {
     "lodash": "^4.15.0",
-    "react": "0.14.8",
+    "antd": "^1.10.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "redux": "^3.5.2",
+    "react-redux": "^4.4.5"
   }
 }

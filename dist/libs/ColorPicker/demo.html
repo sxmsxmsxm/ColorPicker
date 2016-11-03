@@ -18,14 +18,14 @@
 <body>
 <div id="demo" ></div>
 <script>
-$('#demo').ColorPicker({
+	$('#demo').ColorPicker({
 
-	onChange: function (hsb, hex, rgb) {
-		var $el = $( $(this).data('colorpicker').el );
-		
-		$el.css('backgroundColor', '#' + hex).val('#' + hex);
-	}
-});
-	</script>
+		onChange: function (hsb, hex, rgb) {
+			var $el = $( $(this).data('colorpicker').el );
+			
+			$el.css('backgroundColor', '#' + hex).val('#' + hex);
+		}
+	});
+</script>
 </body>
 </html>
